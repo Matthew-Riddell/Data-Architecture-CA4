@@ -1,3 +1,4 @@
+// Matthew Riddell D00245674
 // MongoDB queries
 // 1. Count the number of products per store
 
