@@ -1,0 +1,47 @@
+// MongoDB queries
+// 1. Count the number of products per store
+
+db.products.aggregate([
+  {
+    $group: {
+      _id: "$store",
+      count: { $sum: 1 }
+    }
+  }
+])
+
+// 2. Average price per store
+
+db.products.aggregate([
+  {
+    $unwind: "$variants"
+  },
+  {
+    $group: {
+      _id: "$store",
+      average_price: {
+        $avg: {
+          $toDouble: "$variants.price"
+        }
+      }
+    }
+  }
+])
+
+// 3. Displaying each project but only showing the title, vendor and store name
+
+db.products.find(
+  {},
+  {
+    title: 1,
+    vendor: 1,
+    store: 1,
+    _id: 0
+  }
+).pretty()
+
+// 4. find products that have tags
+
+db.products.find({
+  tags: { $exists: true, $ne: [] }
+})
