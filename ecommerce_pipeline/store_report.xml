@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stores>
+    <store name="Blunt Umbrellas">
+        <product_count>109</product_count>
+        <average_price>96.93</average_price>
+    </store>
+
+    <store name="Meow Meow Tweet">
+        <product_count>112</product_count>
+        <average_price>23.59</average_price>
+    </store>
+</stores>
