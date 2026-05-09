@@ -29,7 +29,7 @@ db.products.aggregate([
   }
 ])
 
-// 3. Displaying each project but only showing the title, vendor and store name
+// 3. Displaying each product but only showing the title, vendor and store name
 
 db.products.find(
   {},
